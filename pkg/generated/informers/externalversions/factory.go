@@ -21,9 +21,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/parvejmia9/CRD/pkg/generated/clientset/versioned"
-	internalinterfaces "github.com/parvejmia9/CRD/pkg/generated/informers/externalversions/internalinterfaces"
-	readercom "github.com/parvejmia9/CRD/pkg/generated/informers/externalversions/reader.com"
+	versioned "github.com/parvejmia9/CRD-Controller/pkg/generated/clientset/versioned"
+	internalinterfaces "github.com/parvejmia9/CRD-Controller/pkg/generated/informers/externalversions/internalinterfaces"
+	readercom "github.com/parvejmia9/CRD-Controller/pkg/generated/informers/externalversions/reader.com"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

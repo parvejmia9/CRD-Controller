@@ -1,4 +1,4 @@
-module github.com/parvejmia9/CRD
+module github.com/parvejmia9/CRD-Controller
 
 go 1.22.0
 

@@ -19,7 +19,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1 "github.com/parvejmia9/CRD/pkg/apis/reader.com/v1"
+	v1 "github.com/parvejmia9/CRD-Controller/pkg/apis/reader.com/v1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )

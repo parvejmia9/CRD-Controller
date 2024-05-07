@@ -17,8 +17,8 @@ limitations under the License.
 package reader
 
 import (
-	internalinterfaces "github.com/parvejmia9/CRD/pkg/generated/informers/externalversions/internalinterfaces"
-	v1 "github.com/parvejmia9/CRD/pkg/generated/informers/externalversions/reader.com/v1"
+	internalinterfaces "github.com/parvejmia9/CRD-Controller/pkg/generated/informers/externalversions/internalinterfaces"
+	v1 "github.com/parvejmia9/CRD-Controller/pkg/generated/informers/externalversions/reader.com/v1"
 )
 
 // Interface provides access to each of this group's versions.

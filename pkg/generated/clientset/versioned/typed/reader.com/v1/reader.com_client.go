@@ -19,8 +19,8 @@ package v1
 import (
 	"net/http"
 
-	v1 "github.com/parvejmia9/CRD/pkg/apis/reader.com/v1"
-	"github.com/parvejmia9/CRD/pkg/generated/clientset/versioned/scheme"
+	v1 "github.com/parvejmia9/CRD-Controller/pkg/apis/reader.com/v1"
+	"github.com/parvejmia9/CRD-Controller/pkg/generated/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

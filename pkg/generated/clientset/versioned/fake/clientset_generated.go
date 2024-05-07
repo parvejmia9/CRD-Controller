@@ -17,9 +17,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/parvejmia9/CRD/pkg/generated/clientset/versioned"
-	bookstorev1 "github.com/parvejmia9/CRD/pkg/generated/clientset/versioned/typed/reader.com/v1"
-	fakebookstorev1 "github.com/parvejmia9/CRD/pkg/generated/clientset/versioned/typed/reader.com/v1/fake"
+	clientset "github.com/parvejmia9/CRD-Controller/pkg/generated/clientset/versioned"
+	bookstorev1 "github.com/parvejmia9/CRD-Controller/pkg/generated/clientset/versioned/typed/reader.com/v1"
+	fakebookstorev1 "github.com/parvejmia9/CRD-Controller/pkg/generated/clientset/versioned/typed/reader.com/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

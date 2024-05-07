@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	internalinterfaces "github.com/parvejmia9/CRD/pkg/generated/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/parvejmia9/CRD-Controller/pkg/generated/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

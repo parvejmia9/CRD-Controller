@@ -17,7 +17,7 @@ limitations under the License.
 package scheme
 
 import (
-	bookstorev1 "github.com/parvejmia9/CRD/pkg/apis/reader.com/v1"
+	bookstorev1 "github.com/parvejmia9/CRD-Controller/pkg/apis/reader.com/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

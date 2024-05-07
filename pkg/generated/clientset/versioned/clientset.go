@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"net/http"
 
-	bookstorev1 "github.com/parvejmia9/CRD/pkg/generated/clientset/versioned/typed/reader.com/v1"
+	bookstorev1 "github.com/parvejmia9/CRD-Controller/pkg/generated/clientset/versioned/typed/reader.com/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
