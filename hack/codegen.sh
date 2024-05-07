@@ -11,7 +11,7 @@ CODEGEN_PKG=$($GO_CMD list -m -f "{{.Dir}}" k8s.io/code-generator)
 
 source "${CODEGEN_PKG}/kube_codegen.sh"
 
-THIS_PKG="github.com/parvejmia9/CRD"
+THIS_PKG="github.com/parvejmia9/CRD-Controller"
 
 kube::codegen::gen_helpers \
     --boilerplate "${SCRIPT_ROOT}/hack/copyright.txt" \
