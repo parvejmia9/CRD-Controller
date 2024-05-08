@@ -11,4 +11,4 @@ Port forwarding command.
 kubectl port-forward svc/my-book-store-service 9090:3200
 ```
 
-Her my-book-store-service is the service name. Change it if you have different service name.
+Here my-book-store-service is the service name. Change it if you have different service name.
