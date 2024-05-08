@@ -9,6 +9,9 @@ GO_CMD=${1:-go}
 SCRIPT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
 CODEGEN_PKG=$($GO_CMD list -m -f "{{.Dir}}" k8s.io/code-generator)
 
+
+echo "${BASH_SOURCE[0]}"
+
 source "${CODEGEN_PKG}/kube_codegen.sh"
 
 THIS_PKG="github.com/parvejmia9/CRD-Controller"
@@ -24,6 +27,7 @@ kube::codegen::gen_client \
     --boilerplate "${SCRIPT_ROOT}/hack/copyright.txt" \
     "${SCRIPT_ROOT}/pkg/apis"
 
+
 #
 
 #controller-gen rbac:roleName=my-crd-controller crd paths=/home/user/Practice/CRD/pkg/apis/reader.com/v1 \
@@ -32,7 +36,7 @@ kube::codegen::gen_client \
 #
 echo "here"
 
-OUTPUT_PATH="/home/user/Practice/CRD/manifests"
+OUTPUT_PATH="/home/user/Practice/CRD-Controller/manifests"
 
 # Print the current working directory
 echo "Current working directory is: $(pwd)"
@@ -50,9 +54,8 @@ fi
 
 # Now run your controller-gen command
 controller-gen rbac:roleName=my-crd-controller crd \
-  paths=/home/user/Practice/CRD/pkg/apis/reader.com/v1 \
+  paths=/home/user/Practice/CRD-Controller/pkg/apis/reader.com/v1 \
   output:crd:dir="$OUTPUT_PATH" output:stdout
-
 
 
 

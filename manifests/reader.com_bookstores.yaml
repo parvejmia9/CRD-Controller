@@ -40,11 +40,13 @@ spec:
             description: BookStoreSpec is the spec of a BookStore resource.
             properties:
               container:
+                description: ContainerSpec contains specs of container
                 properties:
                   image:
                     type: string
                   port:
-                    type: string
+                    format: int32
+                    type: integer
                 type: object
               name:
                 type: string
@@ -55,6 +57,14 @@ spec:
             - container
             - name
             - replicas
+            type: object
+          status:
+            properties:
+              availableReplicas:
+                format: int32
+                type: integer
+            required:
+            - availableReplicas
             type: object
         required:
         - metadata

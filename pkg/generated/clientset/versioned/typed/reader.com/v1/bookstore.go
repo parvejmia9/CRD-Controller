@@ -38,6 +38,7 @@ type BookStoresGetter interface {
 type BookStoreInterface interface {
 	Create(ctx context.Context, bookStore *v1.BookStore, opts metav1.CreateOptions) (*v1.BookStore, error)
 	Update(ctx context.Context, bookStore *v1.BookStore, opts metav1.UpdateOptions) (*v1.BookStore, error)
+	UpdateStatus(ctx context.Context, bookStore *v1.BookStore, opts metav1.UpdateOptions) (*v1.BookStore, error)
 	Delete(ctx context.Context, name string, opts metav1.DeleteOptions) error
 	DeleteCollection(ctx context.Context, opts metav1.DeleteOptions, listOpts metav1.ListOptions) error
 	Get(ctx context.Context, name string, opts metav1.GetOptions) (*v1.BookStore, error)
@@ -126,6 +127,22 @@ func (c *bookStores) Update(ctx context.Context, bookStore *v1.BookStore, opts m
 		Namespace(c.ns).
 		Resource("bookstores").
 		Name(bookStore.Name).
+		VersionedParams(&opts, scheme.ParameterCodec).
+		Body(bookStore).
+		Do(ctx).
+		Into(result)
+	return
+}
+
+// UpdateStatus was generated because the type contains a Status member.
+// Add a +genclient:noStatus comment above the type to avoid generating UpdateStatus().
+func (c *bookStores) UpdateStatus(ctx context.Context, bookStore *v1.BookStore, opts metav1.UpdateOptions) (result *v1.BookStore, err error) {
+	result = &v1.BookStore{}
+	err = c.client.Put().
+		Namespace(c.ns).
+		Resource("bookstores").
+		Name(bookStore.Name).
+		SubResource("status").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Body(bookStore).
 		Do(ctx).

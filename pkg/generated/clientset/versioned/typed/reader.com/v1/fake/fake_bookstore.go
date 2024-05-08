@@ -99,6 +99,18 @@ func (c *FakeBookStores) Update(ctx context.Context, bookStore *v1.BookStore, op
 	return obj.(*v1.BookStore), err
 }
 
+// UpdateStatus was generated because the type contains a Status member.
+// Add a +genclient:noStatus comment above the type to avoid generating UpdateStatus().
+func (c *FakeBookStores) UpdateStatus(ctx context.Context, bookStore *v1.BookStore, opts metav1.UpdateOptions) (*v1.BookStore, error) {
+	obj, err := c.Fake.
+		Invokes(testing.NewUpdateSubresourceAction(bookstoresResource, "status", c.ns, bookStore), &v1.BookStore{})
+
+	if obj == nil {
+		return nil, err
+	}
+	return obj.(*v1.BookStore), err
+}
+
 // Delete takes name of the bookStore and deletes it. Returns an error if one occurs.
 func (c *FakeBookStores) Delete(ctx context.Context, name string, opts metav1.DeleteOptions) error {
 	_, err := c.Fake.

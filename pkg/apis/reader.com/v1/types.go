@@ -12,7 +12,11 @@ type BookStore struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata"`
 
-	Spec BookStoreSpec `json:"spec"`
+	Spec   BookStoreSpec   `json:"spec"`
+	Status BookStoreStatus `json:"status,omitempty"`
+}
+type BookStoreStatus struct {
+	AvailableReplicas int32 `json:"availableReplicas"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -32,7 +36,8 @@ type BookStoreSpec struct {
 	Container ContainerSpec `json:"container,container"`
 }
 
+// ContainerSpec contains specs of container
 type ContainerSpec struct {
 	Image string `json:"image,omitempty"`
-	Port  string `json:"port,omitempty"`
+	Port  int32  `json:"port,omitempty"`
 }
