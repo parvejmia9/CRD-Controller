@@ -1,4 +1,4 @@
-This repo is about Custom Resource Definition<br>
+This repo is about Custom Resource Definition and Controller<br>
 Controller-gen installation:
 ```
 go install sigs.k8s.io/controller-tools/cmd/controller-gen@latest
